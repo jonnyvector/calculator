@@ -1,7 +1,16 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 h1 {
   font-size: 32px;
-  font-family: Arial;
+
   text-align: center;
+}
+
+button {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .container {
@@ -18,10 +27,17 @@ h1 {
   border-radius: 12px;
 }
 
-.screen {
+.display {
   margin: 16px;
   height: 48px;
   border: 6px solid black;
+  text-align: right;
+}
+
+.display p {
+  font-size: 16px;
+  margin-right: 8px;
+  font-weight: bold;
 }
 
 .button-container {
