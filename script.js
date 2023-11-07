@@ -2,17 +2,20 @@ let numberA = 0;
 let numberB = 0;
 let operator = "";
 let displayValue = 0;
-const numberButtons = document.querySelectorAll(".number-button");
-const operatorButtons = document.querySelectorAll(".operator-button");
+const buttons = document.querySelectorAll(".btn");
 const display = document.querySelector(".display-value");
 
-numberButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    display.innerHTML = `${button.value}`;
-  });
-});
+console.log(buttons);
 
 const operate = function (numberA, numberB, operator) {
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      display.innerHTML += button.value;
+      numberA = display.innerHTML;
+      console.log(parseInt(numberA));
+    });
+  });
+
   if (operator === "x") {
     return numberA * numberB;
   } else if (operator === "/") {

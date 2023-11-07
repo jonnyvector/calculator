@@ -13,6 +13,11 @@ button {
   font-weight: bold;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: rgb(179, 183, 183);
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -20,11 +25,10 @@ button {
 }
 
 .calculator {
-  margin: 5rem 0;
-  height: 450px;
-  width: 450px;
-  border: 6px solid black;
-  border-radius: 12px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .display {
@@ -40,31 +44,28 @@ button {
   font-weight: bold;
 }
 
-.button-container {
-  display: flex;
+.top-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
 }
 
-.number-button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.top-buttons-grid button {
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
-.number-button {
-  width: 100px;
-  height: 50px;
-  margin: 10px;
-  border: 1px solid black;
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-.operator-button-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.operator-button {
-  width: 50px;
-  margin: 10px;
-  height: 50px;
+.btn {
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
